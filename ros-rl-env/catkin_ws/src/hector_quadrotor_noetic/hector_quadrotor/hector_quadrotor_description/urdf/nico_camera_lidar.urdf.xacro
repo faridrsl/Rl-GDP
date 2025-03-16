@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<robot name="quadrotor" xmlns:xacro="http://www.ros.org/wiki/xacro">
+   
+    <xacro:property name="M_PI" value="3.1415926535897931" />
+    
+
+    <!-- Included URDF Files -->
+    <xacro:include filename="$(find hector_quadrotor_description)/urdf/nico_base.urdf.xacro" /> <!-- Updated for GDP -->
+    
+    <!-- Instantiate quadrotor_base_macro once (has no parameters atm) -->
+    <xacro:quadrotor_base_macro />
+
+    
+    <!-- ydlidar_t-mini_plus mounted on top of the quadrotor -->
+    <xacro:include filename="$(find hector_sensors_description)/urdf/nico_lidar.urdf.xacro" /> <!-- Updated for GDP -->
+    <xacro:ydlidar_t-mini_plus name="laser0" parent="base_link" ros_topic="scan" update_rate="40" ray_count="360" min_angle="-90" max_angle="90">
+      <origin xyz="-0.0192 -0.0192 0.083" rpy="0 0 0"/>
+    </xacro:ydlidar_t-mini_plus>
+    
+    <!-- Forward facing camera -->
+    <xacro:include filename="$(find hector_sensors_description)/urdf/nico_camera.urdf.xacro" />
+    <xacro:nico_camera name="front_cam" parent="base_link" ros_topic="camera/image" cam_info_topic="camera/camera_info" update_rate="15" res_x="160" res_y="160" image_format="R8G8B8" hfov="50">
+      <origin xyz="0.0633 0.0198 -0.1383" rpy="0 0 ${-M_PI/2}"/>
+    </xacro:nico_camera>
+    
+</robot>

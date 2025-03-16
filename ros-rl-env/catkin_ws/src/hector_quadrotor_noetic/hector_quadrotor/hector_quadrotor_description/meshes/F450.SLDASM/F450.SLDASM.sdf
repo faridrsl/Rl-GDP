@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<sdf version='1.7'>
+  <model name='F450.SLDASM'>
+    <link name='base_link'>
+
+      <inertial>
+        <pose>-0.002298 -0.009534 0.003246 0 -0 0</pose>
+        <mass>1.32667</mass>
+        <inertia>
+          <ixx>0.00764609</ixx>
+          <ixy>3.35793e-05</ixy>
+          <ixz>-8.43824e-06</ixz>
+          <iyy>0.00939535</iyy>
+          <iyz>-3.8375e-05</iyz>
+          <izz>0.00778787</izz>
+        </inertia>
+      </inertial>
+
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://F450.SLDASM/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>  
+
+      <collision name='base_link_fixed_joint_lump__Propeller_Link_2_collision_1'>
+        <pose>0.15705 -0.15706 0.07525 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://F450.SLDASM/meshes/Propeller_Link_2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <collision name='base_link_fixed_joint_lump__Propeller_Link_3_collision_2'>
+        <pose>-0.15706 -0.15705 0.07525 -3.14159 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://F450.SLDASM/meshes/Propeller_Link_3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      
+      <collision name='base_link_fixed_joint_lump__Propeller_Link_4_collision_3'>
+        <pose>-0.15705 0.15706 0.07525 0 0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://F450.SLDASM/meshes/Propeller_Link_4.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <collision name='base_link_fixed_joint_lump__Propeller_Link_1_collision_4'>
+        <pose>0.15706 0.15705 0.07525 3.14159 0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://F450.SLDASM/meshes/Propeller_Link_1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://F450.SLDASM/meshes/base_link.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <visual name='base_link_fixed_joint_lump__Propeller_Link_2_visual_1'>
+        <pose>0.15705 -0.15706 0.07525 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://F450.SLDASM/meshes/Propeller_Link_2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <visual name='base_link_fixed_joint_lump__Propeller_Link_3_visual_2'>
+        <pose>-0.15706 -0.15705 0.07525 -3.14159 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://F450.SLDASM/meshes/Propeller_Link_3.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <visual name='base_link_fixed_joint_lump__Propeller_Link_4_visual_3'>
+        <pose>-0.15705 0.15706 0.07525 0 0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://F450.SLDASM/meshes/Propeller_Link_4.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <visual name='base_link_fixed_joint_lump__Propeller_Link_1_visual_4'>
+        <pose>0.15706 0.15705 0.07525 3.14159 0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://F450.SLDASM/meshes/Propeller_Link_1.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+    </link>
+  </model>
+</sdf>

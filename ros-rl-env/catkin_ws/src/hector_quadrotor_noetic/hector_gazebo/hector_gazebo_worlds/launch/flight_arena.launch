@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find hector_gazebo_worlds)/launch/start.launch">
+    <!-- <arg name="world" value="$(find hector_gazebo_worlds)/worlds/flight_arena.world"/> -->
+    <arg name="world" value="$(find hector_gazebo_worlds)/worlds/flight_arena_3.world"/>
+  </include>
+
+</launch>
